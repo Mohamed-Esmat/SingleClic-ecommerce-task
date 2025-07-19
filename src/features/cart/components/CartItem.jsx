@@ -27,29 +27,31 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center justify-between p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 bg-white border border-gray-200 rounded-lg shadow-sm space-y-4 sm:space-y-0">
       {/* Product Image & Info */}
-      <div className="flex items-center space-x-4">
-        <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
+      <div className="flex items-start sm:items-center space-x-4 flex-1">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
           <img
             src={item.image}
             alt={item.title}
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-sm sm:text-lg font-semibold text-gray-900 line-clamp-2">
             {item.title}
           </h3>
-          <p className="text-sm text-gray-500 capitalize">{item.category}</p>
-          <p className="text-lg font-bold text-indigo-600 mt-1">
+          <p className="text-xs sm:text-sm text-gray-500 capitalize">{item.category}</p>
+          <p className="text-base sm:text-lg font-bold text-indigo-600 mt-1">
             ${item.price.toFixed(2)}
           </p>
         </div>
       </div>
 
-      {/* Quantity Controls */}
-      <div className="flex items-center space-x-4">
+      {/* Quantity Controls & Actions - Mobile: Row layout, Desktop: Existing layout */}
+      <div className="flex items-center justify-between sm:justify-end sm:space-x-4">
+        
+        {/* Quantity Controls */}
         <div className="flex items-center space-x-2">
           <button
             onClick={handleDecrement}
@@ -57,7 +59,7 @@ const CartItem = ({ item }) => {
           >
             -
           </button>
-          <span className="w-12 text-center font-medium text-lg">
+          <span className="w-8 sm:w-12 text-center font-medium text-sm sm:text-lg">
             {item.quantity}
           </span>
           <button
@@ -69,21 +71,21 @@ const CartItem = ({ item }) => {
         </div>
 
         {/* Subtotal */}
-        <div className="text-right min-w-[80px]">
-          <p className="text-lg font-bold text-gray-900">
+        <div className="text-right min-w-[60px] sm:min-w-[80px]">
+          <p className="text-sm sm:text-lg font-bold text-gray-900">
             ${item.totalPrice.toFixed(2)}
           </p>
-          <p className="text-sm text-gray-500">${item.price.toFixed(2)} each</p>
+          <p className="text-xs sm:text-sm text-gray-500">${item.price.toFixed(2)} each</p>
         </div>
 
         {/* Remove Button */}
         <button
           onClick={handleRemove}
-          className="p-2 text-red-600 hover:text-red-800 hover:bg-red-50 rounded-lg transition-colors"
+          className="p-1 sm:p-2 text-red-600 hover:text-red-800 hover:bg-red-50 rounded-lg transition-colors"
           title="Remove item"
         >
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4 sm:w-5 sm:h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
