@@ -285,11 +285,11 @@ useEffect(() => {
 
 ```bash
 # Clone the repository
-git clone
+git clone https://github.com/Mohamed-Esmat/SingleClic-ecommerce-task
 cd singleclic-task
 
 # Install dependencies
-npm install https://github.com/Mohamed-Esmat/SingleClic-ecommerce-task
+npm install
 
 # Start development server
 npm run dev
