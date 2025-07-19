@@ -11,6 +11,7 @@ This application demonstrates a full-featured e-commerce platform with product b
 
 - [Overview](#overview)
 - [Demo](#demo)
+- [Installation](#installation)
 - [Tech Stack](#tech-stack)
   - [Core Technologies](#core-technologies)
   - [State Management](#state-management)
