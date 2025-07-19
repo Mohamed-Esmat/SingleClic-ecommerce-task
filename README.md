@@ -6,8 +6,58 @@ A modern, responsive e-commerce application built with React and clean architect
 
 This application demonstrates a full-featured e-commerce platform with product browsing, filtering, searching, and shopping cart functionality. It showcases modern React development practices, clean code architecture, and seamless API integration.
 
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+  - [Core Technologies](#core-technologies)
+  - [State Management](#state-management)
+  - [Routing](#routing)
+  - [Data Fetching](#data-fetching)
+  - [Styling](#styling)
+  - [Development Tools](#development-tools)
+- [Architecture](#architecture)
+  - [Clean Architecture Principles](#clean-architecture-principles)
+  - [Key Architectural Decisions](#key-architectural-decisions)
+- [Features](#features)
+  - [Product Management](#product-management)
+  - [Shopping Cart](#shopping-cart)
+  - [User Interface](#user-interface)
+- [API Integration](#api-integration)
+  - [External APIs](#external-apis)
+  - [Backend Persistence](#backend-persistence)
+  - [Data Flow Architecture](#data-flow-architecture)
+- [State Management Strategy](#state-management-strategy)
+  - [Redux Store Structure](#redux-store-structure)
+  - [Cart State Management Approach](#cart-state-management-approach)
+- [Custom Hooks](#custom-hooks)
+  - [Product Hooks](#product-hooks)
+  - [Implementation Benefits](#implementation-benefits)
+- [Component Architecture](#component-architecture)
+  - [Shared Components](#shared-components)
+  - [Product Components](#product-components)
+  - [Cart Components](#cart-components)
+- [Responsive Design](#responsive-design)
+  - [Mobile-First Approach](#mobile-first-approach)
+  - [CSS Architecture](#css-architecture)
+- [Performance Optimizations](#performance-optimizations)
+  - [React Query Benefits](#react-query-benefits)
+- [Development Setup](#development-setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Setup](#environment-setup)
+- [Code Quality](#code-quality)
+  - [Best Practices Implemented](#best-practices-implemented)
+- [Project Structure Benefits](#project-structure-benefits)
+  - [Scalability](#scalability)
+  - [Maintainability](#maintainability)
+- [Future Enhancements](#future-enhancements)
+- [Conclusion](#conclusion)
+
 ## Demo
-> 
+> https://single-clic-ecommerce-esmat-task.vercel.app/
 
 ## Tech Stack
 
@@ -239,7 +289,7 @@ git clone
 cd singleclic-task
 
 # Install dependencies
-npm install
+npm install https://github.com/Mohamed-Esmat/SingleClic-ecommerce-task
 
 # Start development server
 npm run dev
