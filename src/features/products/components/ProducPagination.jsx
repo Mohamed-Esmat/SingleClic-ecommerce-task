@@ -8,7 +8,7 @@ const ProductPagination = ({
   totalItems,
   itemsPerPage = 8,
 }) => {
-  const [searchParams, setSearchParams] = useSearchParams(); 
+  const [searchParams, setSearchParams] = useSearchParams();
   const updatePage = (newPage) => {
     const params = new URLSearchParams(searchParams);
 

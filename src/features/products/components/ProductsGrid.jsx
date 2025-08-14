@@ -5,7 +5,7 @@ const ProductsGrid = ({
   products = [],
   isLoading = false,
   isError = false,
-  error = null,
+  // error = null,
 }) => {
   // Loading state - show skeleton cards
   if (isLoading) {
@@ -40,7 +40,7 @@ const ProductsGrid = ({
             Failed to load products
           </h3>
           <p className="text-gray-600 mb-4">
-            {error?.message || "Something went wrong while fetching products."}
+            Something went wrong while fetching products.
           </p>
           <button
             onClick={() => window.location.reload()}
@@ -80,7 +80,7 @@ const ProductsGrid = ({
           </p>
           <button
             onClick={() => {
-              // Clear all filters - you can customize this based on your needs
+              // Clear all filters
               window.location.href = "/products";
             }}
             className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors"

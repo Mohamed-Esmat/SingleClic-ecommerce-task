@@ -30,6 +30,7 @@ export const fetchCartData = () => {
           items: data.items || [],
           totalQuantity: data.totalQuantity || 0,
           totalAmount: data.totalAmount || 0,
+          changed: false,
         })
       );
     } catch (error) {

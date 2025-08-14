@@ -56,14 +56,14 @@ const NotFoundPage = () => {
         {/* Help Text */}
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500">
-            Need help? You can browse our{" "}
+            Need help? You can browse our
             <button
               onClick={() => navigate("/products")}
               className="text-indigo-600 hover:text-indigo-800 underline focus:outline-none"
             >
               products
-            </button>{" "}
-            or check your{" "}
+            </button>
+            or check your
             <button
               onClick={() => navigate("/cart")}
               className="text-indigo-600 hover:text-indigo-800 underline focus:outline-none"

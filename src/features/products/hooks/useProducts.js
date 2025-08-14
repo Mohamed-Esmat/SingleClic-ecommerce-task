@@ -46,7 +46,7 @@ export const useFilteredProducts = ({
     isLoading,
     isError,
     error,
-  } = useProducts({ keepPreviousData: true });
+  } = useProducts({ keepPreviousData: true });// What does keepPreviousData do? It keeps the previous data in the cache while new data is being fetched. and what it's default value is? It's default value is false, meaning it won't keep previous data unless specified. Why we use it? We use it to avoid flickering of the UI when the data is being fetched, providing a smoother user experience.
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory = !category || product.category === category; // Optional category filter

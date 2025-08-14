@@ -37,6 +37,8 @@ const ProductDetailsPage = () => {
     //     price: product.price,
     //     image: product.image,
     //     category: product.category,
+    //     quantity: quantity,
+    //     totalPrice: product.price * quantity,
     //   })
     // );
 
@@ -144,7 +146,7 @@ const ProductDetailsPage = () => {
   const renderStars = (rating) => {
     const stars = [];
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+    const hasHalfStar = rating % 1 !== 0;// What does hasHalfStar do? It checks if the rating has a decimal part, indicating a half star.
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(

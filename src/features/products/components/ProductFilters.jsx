@@ -15,24 +15,21 @@ const ProductFilters = () => {
   const currentSearch = searchParams.get("search") || "";
 
   // Update URL parameters
-  const updateFilter = (key, value, resetPage = true) => {
+  const updateFilter = (key, value) => {
     const params = new URLSearchParams(searchParams); // Create a copy of the current search params.
-    // const currentValue = params.get(key); // Get the current value of the parameter
-
-    // Only update if the value actually changes
-    // if (currentValue === value) return;
 
     if (value && value.trim() !== "") {
       params.set(key, value); // Set or update the parameter
+      params.delete("page"); // Reset to page 1 when filters change
     } else {
       params.delete(key); // Remove the parameter if value is empty
     }
 
     // Only reset to page 1 when filters actually changed AND resetPage is true
-    if (resetPage) {
-      // Reset to page 1 when filters change
-      params.delete("page");
-    }
+    // if (resetPage) {
+    //   // Reset to page 1 when filters change
+    //   params.delete("page");
+    // }
 
     setSearchParams(params);
   };
@@ -40,15 +37,16 @@ const ProductFilters = () => {
   // Debounce search input
   useEffect(() => {
     // Only update if search input is different from current URL search
-    if (searchInput !== currentSearch) {
+    const trimmedInput = searchInput.trim();
+    const trimmedCurrent = currentSearch.trim();
+    
+    if (trimmedInput !== trimmedCurrent) {
       const timer = setTimeout(() => {
         const params = new URLSearchParams(searchParams);
-        // const currentValue = params.get("search") || "";
 
         // Only update if the value actually changes
-        // if (currentValue !== searchInput) {
-        if (searchInput && searchInput.trim() !== "") {
-          params.set("search", searchInput);
+        if (trimmedInput !== "") {
+          params.set("search", trimmedInput);
         } else {
           params.delete("search");
         }
@@ -56,7 +54,6 @@ const ProductFilters = () => {
         // Reset to page 1 when search changes
         params.delete("page");
         setSearchParams(params);
-        // }
       }, 500); // 500ms delay for debounce
 
       return () => clearTimeout(timer);
